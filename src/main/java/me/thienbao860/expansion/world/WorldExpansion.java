@@ -299,7 +299,7 @@ public class WorldExpansion extends PlaceholderExpansion implements Listener, Ca
         String newStr = length < 3 ? minutesAsString.substring(length - 1) : minutesAsString.substring(length - 3);
         int minutes = Integer.parseInt(newStr) * 60 / 999;
         if (is12) {
-            return String.format("%d:%02d%s", hour, minutes, am ? "am" : "pm");
+            return String.format("%d:%02d%s", hour, minutes, am ? "" : "");
         }
         return String.format("%d:%02d", hour, minutes);
 
